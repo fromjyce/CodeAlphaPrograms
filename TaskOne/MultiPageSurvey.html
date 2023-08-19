@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multi-Page Survey</title>
+    <link rel="stylesheet" href="LoginForm.css">
+    <script src="LoginForm.js"></script>
+</head>
+
+<body onload="showPage(1)">
+    <div class="page" id="page1">
+        <h1>Welcome to Our Survey!</h1>
+        <div class="question">
+            <label>Full Name :</label>
+            <input type="text" id="question1_1" placeholder="Name" required>
+            <label>Email : </label>
+            <input type="email" id="question1_2" placeholder="Enter email " required>
+            <label>User id :</label>
+            <input type="text" id="question1_3" placeholder="Create User Id">
+            <label> Country :</label>
+            <input type="text" id="question1_3" placeholder="Country">
+            <label>Gender :</label>
+            <input type="text" id="question1_4" placeholder="Enter Gender">
+        </div>
+        <button onclick="saveDataAndMoveNext(1)">Next</button>
+    </div>
+
+    <div class="page" id="page2">
+        <h1>Share Your Thoughts</h1>
+        <div class="question">
+            <label>Favorite Music Band you like? :</label>
+            <input type="text" id="question1_1" placeholder="Favorite Music Band Name">
+            <label>Music Band Country :</label>
+            <input type="text" id="question1_2" placeholder="Nation">
+            <label>Favorite Singer : </label>
+            <input type="text" id="question1_3" placeholder="Favorite Singer Name" required>
+            <label> Rating :</label>
+            <input type="text" id="question1_4" placeholder="On a scale of [0-10] on survey">
+            <label>Feedback :</label>
+            <textarea id="question1_5" cols="30" rows="10" placeholder="Give your feedback on survey"></textarea>
+        </div>
+        <button onclick="moveToPreviousPage(2)">Previous</button>
+        <button onclick="submitandsave(2)">Submit</button>
+    </div>
+    <div class="page" style="display: none" id="page3">
+        <h1>Thankyou,Survey Completed !</h1>
+        <h2>Your inputs are Stored...</h2>
+    </div>
+</body>
+
+</html>
